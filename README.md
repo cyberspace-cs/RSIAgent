@@ -6,6 +6,13 @@
   <img src="docs/assets/rsiagent-wordmark.svg" alt="RSIAgent" width="480">
 </h1>
 
+<!-- fork 说明 -->
+> **🍴 Fork Note**: This is a fork by [@cyberspace-cs](https://github.com/cyberspace-cs).
+> We've contributed **6 PRs** to the upstream repo, adding a complete observability and decision toolchain for RSI systems.
+> See [Our Contributions](#-our-contributions) below.
+
+---
+
 <h2 align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="docs/assets/rsiagent-subtitle-mobile.svg">
@@ -331,6 +338,48 @@ experiments with the pinned configuration.
 - [Release provenance and validation](docs/RELEASE.md)
 - [Paper and reporting scope](docs/PAPER.md)
 - [Contributing](docs/CONTRIBUTING.md) · [Third-party attribution](docs/THIRD_PARTY.md)
+
+<a id="our-contributions"></a>
+
+## 🤝 Our Contributions
+
+This fork by [@cyberspace-cs](https://github.com/cyberspace-cs) adds a **complete observability and decision toolchain** for RSI systems. These tools help answer the core questions of RSI research:
+
+| # | Tool | What it answers | PR |
+|---|------|-----------------|-----|
+| 1 | **Run Analyzer** | What happened in a single run? (stats, scores, iterations) | [#7](https://github.com/AetherLabsAI/RSIAgent/pull/7) |
+| 2 | **Memory Diff** | What changed between two memory snapshots? | [#8](https://github.com/AetherLabsAI/RSIAgent/pull/8) |
+| 3 | **Saturation Detector** | Has RSI converged / saturated? (early stopping signal) | [#9](https://github.com/AetherLabsAI/RSIAgent/pull/9) |
+| 4 | **Trajectory Visualizer** | What happened step-by-step during a run? (timeline view) | [#10](https://github.com/AetherLabsAI/RSIAgent/pull/10) |
+| 5 | **Compare Runs** | How much better is RSI vs baseline? (quantitative comparison) | [#11](https://github.com/AetherLabsAI/RSIAgent/pull/11) |
+| 6 | **CI Badge** | Build status in README | [#6](https://github.com/AetherLabsAI/RSIAgent/pull/6) |
+
+### Architecture of our toolchain
+
+These 5 tools form a complete **observe → analyze → decide → compare** stack:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    RSI Run Output                           │
+└─────────────────────────────────────────────────────────────┘
+           │
+           ▼
+┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+│   Run Analyzer  │  │   Memory Diff   │  │   Saturation    │
+│   (Observability)│  │  (Evolution)    │  │   Detector      │
+│                 │  │                 │  │   (Decision)    │
+└─────────────────┘  └─────────────────┘  └─────────────────┘
+           │                  │                  │
+           └──────────────────┼──────────────────┘
+                              ▼
+                    ┌─────────────────┐  ┌─────────────────┐
+                    │   Trajectory    │  │   Compare Runs  │
+                    │   Visualizer    │  │   (Evaluation)  │
+                    │   (Playback)     │  │                 │
+                    └─────────────────┘  └─────────────────┘
+```
+
+All tools are in `tools/` directory, pure read-only analysis — they never modify run data.
 
 <a id="citation"></a>
 
