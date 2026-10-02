@@ -338,6 +338,7 @@ experiments with the pinned configuration.
 - [Release provenance and validation](docs/RELEASE.md)
 - [Paper and reporting scope](docs/PAPER.md)
 - [Contributing](docs/CONTRIBUTING.md) · [Third-party attribution](docs/THIRD_PARTY.md)
+- 📖 **学习笔记：recursive-improve 最小 RSI 循环拆解** — [RATCHET-MINIMAL-RSI.md](docs/RATCHET-MINIMAL-RSI.md)（ratchet 6 文件 keep-or-revert 闭环、复合评分、停滞检测、30 行最小复刻）
 
 <a id="our-contributions"></a>
 
