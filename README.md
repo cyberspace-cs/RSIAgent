@@ -25,6 +25,9 @@
   <a href="https://huggingface.co/papers/2609.15364" title="No. 6 on the September 15, 2026 Daily Papers list; checked September 16, 2026 (UTC)"><img src="https://img.shields.io/badge/HF_Daily_Papers-%236_%C2%B7_2026--09--15-FFD21E?style=flat&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Hugging Face Daily Papers: #6 on the September 15, 2026 list"></a>
   <a href="https://aetherlabsai.github.io/RSIAgent/"><img src="https://img.shields.io/badge/Website-RSIAgent-6554c0?style=flat" alt="Website: RSIAgent"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue?style=flat" alt="License: Apache 2.0"></a>
+  <a href="https://github.com/WenyiWU0111/RSIGame">
+  <img src="https://img.shields.io/badge/Companion-RSIGame-FF7A45?style=flat&logo=github&logoColor=white"
+       alt="Companion Project: RSIGame"></a>
 </p>
 
 <!-- Rank snapshot verified September 16, 2026 (UTC): https://huggingface.co/papers/date/2026-09-15 -->
@@ -39,14 +42,13 @@ https://github.com/user-attachments/assets/11cb3919-1073-4ba3-8bcd-37a15ec53c33
 
 ## 📰 News & Highlights
 
-> **🔥 Headline feature in 机器之心 · September 2026**
+<!-- Add new updates above the existing entries, newest first. -->
+
+> **[2026-09-15]** 🔥 **Headline feature in [机器之心](https://mp.weixin.qq.com/s/bg0tkvHsKTZ88uBNKUdVTQ)**
 >
-> **Open-source models surpass GPT-6 Astra on challenging computer-use benchmarks.**
-> Discover how RSIAgent turns autonomous exploration into reusable experience—without updating model weights.
+> RSIAgent enables open-source models to autonomously explore new environments and surpass GPT-6 Astra on multiple challenging benchmarks.
 >
-> [![WeChat article reads: 40K+](https://img.shields.io/badge/WeChat_reads-40K%2B-2E7D32?style=flat-square&logo=wechat&logoColor=white)](https://mp.weixin.qq.com/s/bg0tkvHsKTZ88uBNKUdVTQ)
->
-> <sub>Read-count snapshot: September 16, 2026.</sub>
+> [![WeChat article reads: 43.8K](https://img.shields.io/badge/WeChat_reads-43.8K-2E7D32?style=flat-square&logo=wechat&logoColor=white)](https://mp.weixin.qq.com/s/bg0tkvHsKTZ88uBNKUdVTQ)
 
 <a id="overview"></a>
 
@@ -327,6 +329,14 @@ memory, candidate replay, Verifier isolation, and checkpoint rollback using
 synthetic files. They make no model or official grader calls. Smoke success
 validates runtime mechanics; reproducing benchmark scores requires complete
 experiments with the pinned configuration.
+
+<a id="related-project"></a>
+
+## 🔗 Related Projects
+
+- **[RSIGame](https://github.com/WenyiWU0111/RSIGame)** extends our research on recursive self-improvement to autonomous game development. Agents iteratively build, test, and refine games, using feedback from each round to guide subsequent improvements. It explores how experience accumulated during development can help agents improve the games they create.
+
+  [Paper](https://arxiv.org/abs/2609.39045) · [Code](https://github.com/WenyiWU0111/RSIGame)
 
 <a id="documentation"></a>
 
